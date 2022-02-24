@@ -1,0 +1,40 @@
+.solar-system{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+  margin-top: 5em;
+  margin-bottom: 10%;
+}
+
+.planet:hover {
+  border: 4px solid white;
+  border-radius: 25px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.planet .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.planet:hover .tooltiptext {
+  visibility: visible;
+}
